@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Turisticks — Корзина</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <canvas id="stars-canvas"></canvas>
+
+    <div class="top-panel">
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <a href="index.html" class="top-panel-text" style="text-decoration:none;">Space Turisticks</a>
+        </div>
+        <nav class="top-nav">
+            <a href="index.html#tours" class="nav-link">Туры</a>
+            <a href="index.html#about" class="nav-link">О нас</a>
+            <a href="index.html#destinations" class="nav-link">Направления</a>
+            <a href="index.html#contact" class="nav-link">Контакты</a>
+            
+    </div>
+
+    <div class="left-panel">
+        
+
+    </div>
+
+    <div class="cart-page">
+        <div class="cart-header">
+            <h1 class="cart-title">🛒 Моя корзина</h1>
+            <p class="cart-subtitle">Забронированные туры</p>
+        </div>
+
+        <!-- Пустая корзина -->
+        <div id="cart-empty" class="cart-empty" style="display:none;">
+            <div class="cart-empty-icon">🚀</div>
+            <h2>Корзина пуста</h2>
+            <p>Вы ещё не забронировали ни одного тура</p>
+            <a href="index.html#tours" class="btn-primary">Выбрать тур</a>
+        </div>
+
+        <!-- Список туров в корзине -->
+        <div id="cart-items" class="cart-items"></div>
+
+        <!-- Итого -->
+        <div id="cart-summary" class="cart-summary" style="display:none;">
+            <div class="summary-box">
+                <div class="summary-row">
+                    <span>Туров забронировано:</span>
+                    <span id="summary-count" class="summary-val">0</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Итого:</span>
+                    <span id="summary-price" class="summary-val">0 ₽</span>
+                </div>
+                <p class="summary-note">* Цена указана «от» — точная стоимость рассчитывается менеджером</p>
+                <button class="btn-primary" style="width:100%; margin-top:16px;" id="checkout-btn">Оформить заказ</button>
+                <p id="checkout-response" class="contact-response" style="margin-top:12px;"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Space Turisticks. Все права защищены. Лицензия Роскосмоса №ST-2025.</p>
+    </footer>
+
+    <script src="js-script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
