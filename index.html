@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Turisticks — Космические туры</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <canvas id="stars-canvas"></canvas>
+    <div class="top-panel">
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <p class="top-panel-text">Space Turisticks</p>
+        </div>
+        <nav class="top-nav">
+            <a href="#tours" class="nav-link">Туры</a>
+            <a href="#about" class="nav-link">О нас</a>
+            <a href="#destinations" class="nav-link">Направления</a>
+            <a href="#contact" class="nav-link">Контакты</a>
+        </nav>
+    </div>
+    <div class="left-panel">
+    
+    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Первое в России</div>
+            <h1 class="hero-title">Туры<br><span class="hero-accent">в открытый</span><br>космос</h1>
+            <p class="hero-subtitle">Мы делаем невозможное возможным — путешествия за пределы атмосферы для всех, кто мечтает о звёздах</p>
+            <div class="hero-buttons">
+                <a href="#tours" class="btn-primary">Выбрать тур</a>
+                <a href="#about" class="btn-outline">Узнать больше</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">247</span><span class="stat-label">Запусков</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Довольных клиентов</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">12</span><span class="stat-label">Направлений</span></div>
+            </div>
+        </div>
+        <div class="hero-planet"></div>
+    </section>
+    <section id="tours" class="tours-section">
+        <div class="zagolovok">🔥 Горящие туры</div>
+        <p class="section-subtitle">Ограниченные предложения — успей забронировать</p>
+        <div class="grid-card">
+            <div class="card">
+                <div class="card-badge">Хит</div>
+                <div class="card-image-wrap">
+                    <img class="card-image" src="/Images/Цветы Плюмерии.jpg" alt="Суборбитальный полёт">
+                    <div class="card-price">от 2 500 000 ₽</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Суборбитальный полёт</h3>
+                    <p class="card-text">Пять минут невесомости и вид на изгиб родной планеты</p>
+                    <div class="card-meta"><span>⏱ 3 часа</span><span>👥 до 6 чел.</span></div>
+                </div>
+                <button class="card-button">Забронировать</button>
+                <p class="card-accept"></p>
+            </div>
+            <div class="card">
+                <div class="card-badge card-badge-new">Новинка</div>
+                <div class="card-image-wrap">
+                    <img class="card-image" src="/Images/bf9d540b4df108c43a1f8e617b6bf23d.jpg" alt="Облёт Луны">
+                    <div class="card-price">от 18 000 000 ₽</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Облёт Луны</h3>
+                    <p class="card-text">Великое путешествие к другому миру и взгляд на Землю издалека</p>
+                    <div class="card-meta"><span>⏱ 6 суток</span><span>👥 до 4 чел.</span></div>
+                </div>
+                <button class="card-button">Забронировать</button>
+                <p class="card-accept"></p>
+            </div>
+            <div class="card">
+                <div class="card-image-wrap">
+                    <img class="card-image" src="/Images/d6c42b2c0161b86ca1c99cd59d8b1af2.jpg" alt="Орбитальная капсула">
+                    <div class="card-price">от 8 000 000 ₽</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Орбитальная капсула</h3>
+                    <p class="card-text">Плавный полёт в роскошной капсуле в открытом космосе</p>
+                    <div class="card-meta"><span>⏱ 2 суток</span><span>👥 до 8 чел.</span></div>
+                </div>
+                <button class="card-button">Забронировать</button>
+                <p class="card-accept"></p>
+            </div>
+            <div class="card">
+                <div class="card-badge card-badge-hot">Топ</div>
+                <div class="card-image-wrap">
+                    <img class="card-image" src="/Images/iss_2000-h.jpg" alt="МКС — Экспедиция">
+                    <div class="card-price">от 35 000 000 ₽</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">МКС — Экспедиция</h3>
+                    <p class="card-text">Две недели на международной космической станции вместе с экипажем</p>
+                    <div class="card-meta"><span>⏱ 14 суток</span><span>👥 до 2 чел.</span></div>
+                </div>
+                <button class="card-button">Забронировать</button>
+                <p class="card-accept"></p>
+            </div>
+            <div class="card">
+                <div class="card-image-wrap">
+                    <img class="card-image" src="/Images/63018ece5d9a1_cover_tablet-conversion-webp.webp" alt="Выход в открытый космос">
+                    <div class="card-price">от 55 000 000 ₽</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Выход в открытый космос</h3>
+                    <p class="card-text">Личный скафандр, страховочный трос и бесконечность вокруг вас</p>
+                    <div class="card-meta"><span>⏱ 21 сутки</span><span>👥 до 2 чел.</span></div>
+                </div>
+                <button class="card-button">Забронировать</button>
+                <p class="card-accept"></p>
+            </div>
+            <div class="card">
+                <div class="card-badge card-badge-new">Скоро</div>
+                <div class="card-image-wrap">
+                    <img class="card-image" src="/Images/7382da9644fe10fee1e9953f259205e4.jpg" alt="Марсианская орбита">
+                    <div class="card-price">от 200 000 000 ₽</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Марсианская орбита</h3>
+                    <p class="card-text">Первый коммерческий перелёт к Красной планете — войди в историю</p>
+                    <div class="card-meta"><span>⏱ 18 месяцев</span><span>👥 до 6 чел.</span></div>
+                </div>
+                <button class="card-button">Забронировать</button>
+                <p class="card-accept"></p>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <div class="about-grid">
+            <div class="about-text">
+                <div class="zagolovok" style="margin-left:0; padding-top:0;">О компании</div>
+                <p class="about-desc">Space Turisticks — первое российское агентство космического туризма. С 2019 года мы открываем звёзды для смельчаков, мечтателей и первопроходцев.</p>
+                <p class="about-desc">Каждый маршрут разработан совместно с инженерами-ракетчиками и прошёл многоуровневую сертификацию безопасности. Ваше приключение начинается задолго до старта — с трёхмесячной подготовки в нашем учебном центре.</p>
+                <div class="about-features">
+                    <div class="feature-item"><span class="feature-icon">🛡️</span><div><b>Безопасность</b><p>Тройное резервирование всех систем</p></div></div>
+                    <div class="feature-item"><span class="feature-icon">🎓</span><div><b>Подготовка</b><p>Персональный тренер-космонавт</p></div></div>
+                    <div class="feature-item"><span class="feature-icon">🌐</span><div><b>Поддержка 24/7</b><p>Наземный центр управления всегда на связи</p></div></div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="orbit-anim">
+                    <div class="planet-big"></div>
+                    <div class="orbit-ring"><div class="satellite"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="destinations" class="destinations-section">
+        <div class="zagolovok" style="text-align:center; margin-left:0;">Направления</div>
+        <p class="section-subtitle" style="text-align:center;">Куда мы летим</p>
+        <div class="dest-grid">
+            <div class="dest-card"><div class="dest-icon">🌍</div><h3>Низкая орбита</h3><p>200–400 км над Землёй</p></div>
+            <div class="dest-card"><div class="dest-icon">🌕</div><h3>Луна</h3><p>384 400 км от Земли</p></div>
+            <div class="dest-card"><div class="dest-icon">🔴</div><h3>Марс</h3><p>54,6–401 млн км</p></div>
+            <div class="dest-card"><div class="dest-icon">🪐</div><h3>Пояс астероидов</h3><p>329–478 млн км</p></div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <div class="zagolovok" style="text-align:center; margin-left:0;">Связаться с нами</div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p>📍 Тюмень, ул. Парфёнова, 19</p>
+                <p>📞 +7 (800) 555-STAR</p>
+                <p>✉️ gg6527025@gmail.com</p>
+            </div>
+            <div class="contact-form">
+                <input class="form-input" type="text" placeholder="Ваше имя">
+                <input class="form-input" type="email" placeholder="Email">
+                <textarea class="form-input form-textarea" placeholder="Ваш вопрос или пожелание"></textarea>
+                <button class="btn-primary" id="contact-submit">Отправить запрос</button>
+                <p id="contact-response" class="contact-response"></p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>2025 Space Turisticks. Все права защищены</p>
+    </footer>
+    <script src="js-script.js"></script>
+</body>
+</html>
