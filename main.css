@@ -15,7 +15,7 @@
     --font-body: 'Exo 2', sans-serif;
 }
  
-/* ===== RESET & BASE ===== */
+
 *, *::before, *::after { box-sizing: border-box; }
  
 body {
@@ -27,7 +27,7 @@ body {
     overflow-x: hidden;
 }
  
-/* ===== STARS CANVAS ===== */
+
 #stars-canvas {
     position: fixed;
     top: 0; left: 0;
@@ -36,7 +36,7 @@ body {
     pointer-events: none;
 }
  
-/* ===== TOP PANEL (твоя, улучшенная) ===== */
+
 .top-panel {
     display: flex;
     justify-content: space-between;
@@ -100,7 +100,7 @@ body {
     color: var(--accent);
 }
  
-/* ===== LEFT PANEL (твоя, улучшенная) ===== */
+
 .left-panel {
     position: fixed;
     top: 70px;
@@ -169,7 +169,7 @@ body {
     pointer-events: auto;
 }
  
-/* ===== HERO ===== */
+
 .hero {
     position: relative;
     z-index: 1;
@@ -306,7 +306,7 @@ body {
     background: var(--border);
 }
  
-/* Планета в hero */
+
 .hero-planet {
     position: absolute;
     right: -100px;
@@ -345,7 +345,7 @@ body {
     to { box-shadow: inset -60px -60px 100px rgba(0,0,0,0.8), 0 0 120px rgba(0, 100, 255, 0.25); }
 }
  
-/* ===== ОБЩИЕ СТИЛИ СЕКЦИЙ ===== */
+
 .tours-section,
 .about-section,
 .destinations-section,
@@ -372,7 +372,7 @@ body {
     margin: 8px 0 40px 120px;
 }
  
-/* ===== КАРТОЧКИ (твои, улучшенные) ===== */
+
 .grid-card {
     display: grid;
     padding: 0 80px 0 120px;
@@ -426,7 +426,7 @@ body {
     overflow: hidden;
 }
  
-/* Тёмный overlay поверх фото для читаемости текста */
+
 .card-image-wrap::after {
     content: '';
     position: absolute;
@@ -451,7 +451,7 @@ body {
     );
 }
  
-/* Световой блик при hover (сканирующая линия) */
+
 .card-image-wrap::before {
     content: '';
     position: absolute;
@@ -580,7 +580,7 @@ body {
     border-top: 1px solid rgba(0, 255, 136, 0.2);
 }
  
-/* ===== О НАС ===== */
+
 .about-section {
     background: rgba(6, 18, 45, 0.6);
     border-top: 1px solid var(--border);
@@ -635,7 +635,7 @@ body {
     font-size: 13px;
 }
  
-/* Орбитальная анимация */
+
 .about-visual {
     display: flex;
     justify-content: center;
@@ -685,7 +685,7 @@ body {
     to { transform: rotate(360deg); }
 }
  
-/* ===== НАПРАВЛЕНИЯ ===== */
+
 .destinations-section {
     padding: 80px 120px;
 }
@@ -727,7 +727,7 @@ body {
     margin: 0;
 }
  
-/* ===== КОНТАКТЫ ===== */
+
 .contact-section {
     padding: 80px 120px;
     background: rgba(6, 18, 45, 0.5);
@@ -792,7 +792,7 @@ body {
     min-height: 20px;
 }
  
-/* ===== FOOTER ===== */
+
 .footer {
     position: relative;
     z-index: 1;
