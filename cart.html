@@ -22,21 +22,18 @@
             <a href="index.html#about" class="nav-link">О нас</a>
             <a href="index.html#destinations" class="nav-link">Направления</a>
             <a href="index.html#contact" class="nav-link">Контакты</a>
-            
-    </div>
-
-    <div class="left-panel">
         
-
+        </nav>
     </div>
 
+  
     <div class="cart-page">
         <div class="cart-header">
             <h1 class="cart-title">🛒 Моя корзина</h1>
             <p class="cart-subtitle">Забронированные туры</p>
         </div>
 
-        <!-- Пустая корзина -->
+
         <div id="cart-empty" class="cart-empty" style="display:none;">
             <div class="cart-empty-icon">🚀</div>
             <h2>Корзина пуста</h2>
@@ -44,29 +41,80 @@
             <a href="index.html#tours" class="btn-primary">Выбрать тур</a>
         </div>
 
-        <!-- Список туров в корзине -->
-        <div id="cart-items" class="cart-items"></div>
+   
+        <div id="cart-main" style="display:none;">
 
-        <!-- Итого -->
-        <div id="cart-summary" class="cart-summary" style="display:none;">
-            <div class="summary-box">
-                <div class="summary-row">
-                    <span>Туров забронировано:</span>
-                    <span id="summary-count" class="summary-val">0</span>
+            <!-- Список туров -->
+            <div id="cart-items" class="cart-items"></div>
+
+
+            <div class="cart-bottom">
+
+     
+                <div class="cart-contacts">
+                    <h2 class="contacts-title">📋 Контактные данные</h2>
+                    <p class="contacts-desc">Заполните форму, чтобы менеджер смог с вами связаться</p>
+
+                    <div class="contacts-grid">
+                        <div class="field-wrap">
+                            <label class="field-label">Имя <span class="field-required">*</span></label>
+                            <input class="form-input" id="contact-name" type="text" placeholder="Иван Иванов">
+                            <span class="field-hint" id="hint-name"></span>
+                        </div>
+                        <div class="field-wrap">
+                            <label class="field-label">Телефон <span class="field-required">*</span></label>
+                            <input class="form-input" id="contact-phone" type="tel" placeholder="+7 (___) ___-__-__">
+                            <span class="field-hint" id="hint-phone"></span>
+                        </div>
+                        <div class="field-wrap">
+                            <label class="field-label">Email <span class="field-required">*</span></label>
+                            <input class="form-input" id="contact-email" type="email" placeholder="ivan@mail.ru">
+                            <span class="field-hint" id="hint-email"></span>
+                        </div>
+                        <div class="field-wrap">
+                            <label class="field-label">Пожелания</label>
+                            <input class="form-input" id="contact-wish" type="text" placeholder="Дата старта, особые пожелания...">
+                        </div>
+                    </div>
+
+            
+                    <div class="fill-progress">
+                        <div class="fill-bar">
+                            <div class="fill-bar-inner" id="fill-bar-inner"></div>
+                        </div>
+                        <span class="fill-label" id="fill-label">Заполните обязательные поля</span>
+                    </div>
                 </div>
-                <div class="summary-row summary-total">
-                    <span>Итого:</span>
-                    <span id="summary-price" class="summary-val">0 ₽</span>
+
+ 
+                <div class="summary-box">
+                    <div class="summary-row">
+                        <span>Туров забронировано:</span>
+                        <span id="summary-count" class="summary-val">0</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Итого:</span>
+                        <span id="summary-price" class="summary-val">0 ₽</span>
+                    </div>
+                    <p class="summary-note">* Цена указана «от» — точная стоимость рассчитывается менеджером</p>
+
+      
+                    <div class="checkout-hint" id="checkout-hint">
+                        <span>⚠ Заполните контактные данные</span>
+                    </div>
+
+                    <button class="btn-primary btn-checkout" id="checkout-btn" disabled>
+                        Оформить заказ
+                    </button>
+                    <p id="checkout-response" class="contact-response" style="margin-top:12px;"></p>
                 </div>
-                <p class="summary-note">* Цена указана «от» — точная стоимость рассчитывается менеджером</p>
-                <button class="btn-primary" style="width:100%; margin-top:16px;" id="checkout-btn">Оформить заказ</button>
-                <p id="checkout-response" class="contact-response" style="margin-top:12px;"></p>
+
             </div>
         </div>
     </div>
 
     <footer class="footer">
-        <p>© 2025 Space Turisticks. Все права защищены. Лицензия Роскосмоса №ST-2025.</p>
+        <p>2025 Space Turisticks. Все права защищены</p>
     </footer>
 
     <script src="js-script.js"></script>
