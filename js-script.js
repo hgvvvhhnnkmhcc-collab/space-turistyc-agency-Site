@@ -5,8 +5,7 @@ function getCart() {
 function saveCart(cart) {
     localStorage.setItem('spaceCart', JSON.stringify(cart));
 }
- 
-// Обновить счётчик на иконке корзины
+
 function updateCartBadge() {
     const badges = document.querySelectorAll('#cart-count-badge');
     const count = getCart().length;
@@ -38,7 +37,7 @@ function collectTourData(card) {
 }
  
 document.querySelectorAll('.card-button').forEach(button => {
-    // Восстановить состояние из корзины при загрузке
+
     const card = button.closest('.card');
     const titleEl = card ? card.querySelector('.card-title') : null;
     const tourId = titleEl ? titleEl.textContent.trim() : null;
@@ -58,7 +57,7 @@ document.querySelectorAll('.card-button').forEach(button => {
         const isBooked = cart.some(t => t.id === tourId);
  
         if (!isBooked) {
-            // Бронируем — добавляем в корзину
+       
             const tourData = collectTourData(card);
             cart.push(tourData);
             saveCart(cart);
@@ -67,7 +66,7 @@ document.querySelectorAll('.card-button').forEach(button => {
             acceptText.classList.add('visible');
             updateCartBadge();
         } else {
-            // Отменяем — убираем из корзины
+
             cart = cart.filter(t => t.id !== tourId);
             saveCart(cart);
             setBookedState(this, false);
@@ -90,8 +89,7 @@ function setBookedState(btn, booked) {
     }
 }
  
-// ===== ИКОНКА КОРЗИНЫ В НАВИГАЦИИ =====
-// Добавляем кнопку корзины рядом с навигацией (если ещё нет)
+
 (function injectCartIcon() {
     const nav = document.querySelector('.top-nav');
     if (!nav || nav.querySelector('.nav-cart-link')) return;
@@ -105,7 +103,7 @@ function setBookedState(btn, booked) {
     updateCartBadge();
 })();
  
-// ===== ЛЕВАЯ ПАНЕЛЬ: СКРОЛЛ К СЕКЦИИ =====
+
 document.querySelectorAll('.left-panel-button[data-section]').forEach(btn => {
     btn.addEventListener('click', function () {
         const sectionId = this.dataset.section;
@@ -114,7 +112,7 @@ document.querySelectorAll('.left-panel-button[data-section]').forEach(btn => {
     });
 });
  
-// ===== ПЛАВНЫЙ СКРОЛЛ ДЛЯ НАВИГАЦИИ =====
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const target = document.querySelector(this.getAttribute('href'));
@@ -127,9 +125,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
  
 
  
-const EMAILJS_SERVICE_ID  = 'service_lxd70jx';   // ← вставь сюда
-const EMAILJS_TEMPLATE_ID = 'template_ixs288e';  // ← вставь сюда
-const EMAILJS_PUBLIC_KEY  = 'VwDwNdtYX3T7fbCyO';   // ← вставь сюда
+const EMAILJS_SERVICE_ID  = 'service_lxd70jx';  
+const EMAILJS_TEMPLATE_ID = 'template_ixs288e'; 
+const EMAILJS_PUBLIC_KEY  = 'VwDwNdtYX3T7fbCyO';   
  
 (function loadEmailJS() {
     const s = document.createElement('script');
@@ -156,7 +154,7 @@ if (contactBtn) {
             return;
         }
  
-        // Отправка через EmailJS (работает после заполнения ключей выше)
+  
         if (typeof emailjs !== 'undefined' &&
             EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID') {
  
@@ -185,7 +183,7 @@ if (contactBtn) {
             });
  
         } else {
-            // Fallback — откроет почтовый клиент пользователя
+          
             const subject = encodeURIComponent(`Запрос от ${name} — Space Turisticks`);
             const body    = encodeURIComponent(`Имя: ${name}\nEmail: ${email}\n\n${message}`);
             window.location.href = `mailto:gg6527025@gmail.com?subject=${subject}&body=${body}`;
@@ -195,7 +193,7 @@ if (contactBtn) {
     });
 }
  
-// ===== АНИМАЦИЯ ЗВЁЗД (canvas) =====
+
 (function () {
     const canvas = document.getElementById('stars-canvas');
     if (!canvas) return;
@@ -234,7 +232,7 @@ if (contactBtn) {
     draw();
 })();
  
-// ===== ПОЯВЛЕНИЕ КАРТОЧЕК ПРИ СКРОЛЛЕ =====
+
 (function () {
     const cards = document.querySelectorAll('.card, .dest-card');
     cards.forEach((card, i) => {
