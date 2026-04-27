@@ -1,6 +1,4 @@
-/* ===== КОРЗИНА ===== */
 
-/* Иконка корзины в навигации */
 .nav-cart-active {
     color: var(--accent) !important;
     position: relative;
@@ -27,7 +25,7 @@
     transform: scale(1.4);
 }
 
-/* ===== СТРАНИЦА КОРЗИНЫ ===== */
+
 .cart-page {
     position: relative;
     z-index: 1;
@@ -56,7 +54,7 @@
     margin: 0;
 }
 
-/* ===== ПУСТАЯ КОРЗИНА ===== */
+
 .cart-empty {
     text-align: center;
     padding: 80px 0;
@@ -87,7 +85,7 @@
     margin: 0 0 32px 0;
 }
 
-/* ===== ЭЛЕМЕНТЫ КОРЗИНЫ ===== */
+
 .cart-items {
     display: flex;
     flex-direction: column;
@@ -132,7 +130,7 @@
     filter: brightness(0.85) saturate(1.1);
 }
 
-/* Заглушка если нет картинки */
+
 .cart-item-img-placeholder {
     width: 180px;
     height: 130px;
@@ -227,7 +225,7 @@
     transform: translateY(0);
 }
 
-/* ===== ИТОГО ===== */
+
 .cart-summary {
     display: flex;
     justify-content: flex-end;
@@ -269,4 +267,162 @@
     font-size: 11px;
     margin: 12px 0 0 0;
     line-height: 1.5;
+}
+
+
+
+.cart-bottom {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 32px;
+    align-items: start;
+    margin-top: 40px;
+}
+
+.cart-contacts {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.contacts-title {
+    font-family: var(--font-head);
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 6px 0;
+    letter-spacing: 1px;
+}
+
+.contacts-desc {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0 0 24px 0;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.field-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field-label {
+    font-size: 12px;
+    font-family: var(--font-head);
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.field-required {
+    color: #ff4757;
+}
+
+.field-hint {
+    font-size: 11px;
+    min-height: 14px;
+    transition: color 0.2s;
+}
+
+.field-hint.error { color: #ff4757; }
+.field-hint.ok    { color: var(--green, #00ff88); }
+
+
+.form-input.input-error {
+    border-color: rgba(255, 71, 87, 0.6) !important;
+}
+.form-input.input-ok {
+    border-color: rgba(0, 255, 136, 0.45) !important;
+}
+
+.fill-progress {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.fill-bar {
+    flex: 1;
+    height: 4px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.fill-bar-inner {
+    height: 100%;
+    width: 0%;
+    border-radius: 100px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+    transition: width 0.35s ease, background 0.35s ease;
+}
+
+.fill-bar-inner.full {
+    background: linear-gradient(90deg, var(--green, #00ff88), var(--accent));
+}
+
+.fill-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.fill-label.ready {
+    color: var(--green, #00ff88);
+}
+
+
+.btn-checkout {
+    width: 100%;
+    margin-top: 16px;
+    position: relative;
+    transition: opacity 0.25s, transform 0.2s, filter 0.25s !important;
+}
+
+.btn-checkout:disabled {
+    opacity: 0.38;
+    filter: grayscale(0.5);
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.btn-checkout:not(:disabled) {
+    animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 229, 255, 0); }
+    50%       { box-shadow: 0 0 18px 4px rgba(0, 229, 255, 0.3); }
+}
+
+
+.checkout-hint {
+    margin-top: 16px;
+    padding: 10px 14px;
+    background: rgba(255, 215, 0, 0.06);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 8px;
+    font-size: 12px;
+    color: #ffd700;
+    text-align: center;
+    transition: opacity 0.3s, max-height 0.3s;
+    overflow: hidden;
+}
+
+.checkout-hint.hidden {
+    opacity: 0;
+    pointer-events: none;
+    max-height: 0;
+    padding: 0;
+    border: none;
+    margin: 0;
 }
